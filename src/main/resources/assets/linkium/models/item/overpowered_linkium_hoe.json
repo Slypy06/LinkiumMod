@@ -1,0 +1,6 @@
+{
+  "parent": "item/handheld",
+  "textures": {
+    "layer0": "linkium:items/overpowered_linkium_hoe"
+  }
+}

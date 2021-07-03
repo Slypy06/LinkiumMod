@@ -1,0 +1,37 @@
+{
+  "display": {
+    "background": "minecraft:textures/block/stone.png",
+    "icon": {
+      "item": "linkium:linkium_hoe"
+    },
+    "title": {
+      "translate": "advancements.overpowered_linkium_hoe_advencement.title"
+    },
+    "description": {
+      "translate": "advancements.overpowered_linkium_hoe_advencement.descr"
+    },
+    "frame": "challenge",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "overpowered_linkium_hoe_advencement": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "linkium:linkium_core",
+            "count": {
+              "min": 1,
+              "max": 999999
+            }
+          }
+        ]
+      }
+    }
+  },
+  "rewards": {
+    "experience": 1
+  }
+}

@@ -1,0 +1,667 @@
+{
+  "id_map": {},
+  "mod_elements": [
+    {
+      "name": "LinkiumMod",
+      "type": "tab",
+      "sortid": 10,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "linkium_mod"
+    },
+    {
+      "name": "LinkiumIngot",
+      "type": "item",
+      "sortid": 1,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "linkium_ingot"
+    },
+    {
+      "name": "LinkiumOre",
+      "type": "block",
+      "sortid": 2,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "linkium_ore"
+    },
+    {
+      "name": "LinkiumBlock",
+      "type": "block",
+      "sortid": 3,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "linkium_block"
+    },
+    {
+      "name": "LinkiumOreBlockRecipe",
+      "type": "recipe",
+      "sortid": 11,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "linkium_ore_block_recipe"
+    },
+    {
+      "name": "LinkiumBlockOreRecipe",
+      "type": "recipe",
+      "sortid": 12,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "linkium_block_ore_recipe"
+    },
+    {
+      "name": "LinkiumOreSmelting",
+      "type": "recipe",
+      "sortid": 13,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "linkium_ore_smelting"
+    },
+    {
+      "name": "LinkiumPickaxe",
+      "type": "tool",
+      "sortid": 5,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "linkium_pickaxe"
+    },
+    {
+      "name": "LinkiumAxe",
+      "type": "tool",
+      "sortid": 6,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "linkium_axe"
+    },
+    {
+      "name": "LinkiumSword",
+      "type": "tool",
+      "sortid": 4,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "linkium_sword"
+    },
+    {
+      "name": "LinkiumShovel",
+      "type": "tool",
+      "sortid": 7,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "linkium_shovel"
+    },
+    {
+      "name": "LinkiumHoe",
+      "type": "tool",
+      "sortid": 8,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "linkium_hoe"
+    },
+    {
+      "name": "LinkiumPickaxeRecipe",
+      "type": "recipe",
+      "sortid": 14,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "linkium_pickaxe_recipe"
+    },
+    {
+      "name": "LinkiumAxeRecipe",
+      "type": "recipe",
+      "sortid": 15,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "linkium_axe_recipe"
+    },
+    {
+      "name": "LinkiumSwordRecipe",
+      "type": "recipe",
+      "sortid": 16,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "linkium_sword_recipe"
+    },
+    {
+      "name": "LinkiumShovelRecipe",
+      "type": "recipe",
+      "sortid": 17,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "linkium_shovel_recipe"
+    },
+    {
+      "name": "LinkiumHoeRecipe",
+      "type": "recipe",
+      "sortid": 18,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "linkium_hoe_recipe"
+    },
+    {
+      "name": "LinkiumArmor",
+      "type": "armor",
+      "sortid": 9,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "linkium",
+      "metadata": {
+        "eh": true,
+        "el": true,
+        "eb": true,
+        "ec": true
+      }
+    },
+    {
+      "name": "LinkiumArmorHelmetRecipe",
+      "type": "recipe",
+      "sortid": 19,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "linkium_armor_helmet_recipe"
+    },
+    {
+      "name": "LinkiumArmorBodyRecipe",
+      "type": "recipe",
+      "sortid": 20,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "linkium_armor_body_recipe"
+    },
+    {
+      "name": "LinkiumArmorLeggingsRecipe",
+      "type": "recipe",
+      "sortid": 21,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "linkium_armor_leggings_recipe"
+    },
+    {
+      "name": "LinkiumArmorBootsRecipe",
+      "type": "recipe",
+      "sortid": 22,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "linkium_armor_boots_recipe"
+    },
+    {
+      "name": "LinkiumAdvencment",
+      "type": "achievement",
+      "sortid": 23,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "linkium_advencment"
+    },
+    {
+      "name": "OverpoweredLinkumAdvencement",
+      "type": "achievement",
+      "sortid": 24,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "overpowered_linkum_advencement"
+    },
+    {
+      "name": "SmeltEnchantment",
+      "type": "enchantment",
+      "sortid": 25,
+      "compiles": true,
+      "locked_code": true,
+      "ids": {},
+      "registry_name": "smelt"
+    },
+    {
+      "name": "LinkiumCore",
+      "type": "item",
+      "sortid": 26,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "linkium_core"
+    },
+    {
+      "name": "DiamondCore",
+      "type": "item",
+      "sortid": 27,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "diamond_core"
+    },
+    {
+      "name": "GoldCore",
+      "type": "item",
+      "sortid": 28,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "gold_core"
+    },
+    {
+      "name": "IronCore",
+      "type": "item",
+      "sortid": 29,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "iron_core"
+    },
+    {
+      "name": "LinkiumCoreRecipe",
+      "type": "recipe",
+      "sortid": 30,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "linkium_core_recipe"
+    },
+    {
+      "name": "DiamondCoreRecipe",
+      "type": "recipe",
+      "sortid": 31,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "diamond_core_recipe"
+    },
+    {
+      "name": "GoldCoreRecipe",
+      "type": "recipe",
+      "sortid": 32,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "gold_core_recipe"
+    },
+    {
+      "name": "IronCoreRecipe",
+      "type": "recipe",
+      "sortid": 33,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "iron_core_recipe"
+    },
+    {
+      "name": "LinkiumPowerLoader",
+      "type": "block",
+      "sortid": 34,
+      "compiles": true,
+      "locked_code": true,
+      "ids": {},
+      "registry_name": "linkium_power_loader"
+    },
+    {
+      "name": "LinkiumPowerLoaderGUI",
+      "type": "gui",
+      "sortid": 35,
+      "compiles": true,
+      "locked_code": true,
+      "ids": {},
+      "registry_name": "linkium_power_loader_gui"
+    },
+    {
+      "name": "LinkiumPowerLoaderCraft",
+      "type": "recipe",
+      "sortid": 37,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "linkium_power_loader_craft"
+    },
+    {
+      "name": "OverpoweredLinkiumIngot",
+      "type": "item",
+      "sortid": 38,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "overpowered_linkium_ingot"
+    },
+    {
+      "name": "OverpoweredLinkiumPickaxeRightClicked",
+      "type": "procedure",
+      "sortid": 39,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "overpowered_linkium_pickaxe_right_clicked",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "itemstack",
+            "type": "itemstack"
+          }
+        ]
+      }
+    },
+    {
+      "name": "OverpoweredLinkiumHoeAdvencement",
+      "type": "achievement",
+      "sortid": 40,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "overpowered_linkium_hoe_advencement"
+    },
+    {
+      "name": "OverpoweredLinkiumHoe",
+      "type": "tool",
+      "sortid": 41,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "overpowered_linkium_hoe"
+    },
+    {
+      "name": "OverpoweredLinkiumPickaxe",
+      "type": "tool",
+      "sortid": 39,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "overpowered_linkium_pickaxe"
+    },
+    {
+      "name": "OverpoweredLinkiumAxe",
+      "type": "tool",
+      "sortid": 42,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "overpowered_linkium_axe"
+    },
+    {
+      "name": "OverpoweredLinkiumShovel",
+      "type": "tool",
+      "sortid": 43,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "overpowered_linkium_shovel"
+    },
+    {
+      "name": "OverpoweredLinkiumSword",
+      "type": "tool",
+      "sortid": 44,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "overpowered_linkium_sword"
+    },
+    {
+      "name": "OverpoweredLinkiumSwordRecipe",
+      "type": "recipe",
+      "sortid": 45,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "overpowered_linkium_sword_recipe"
+    },
+    {
+      "name": "OverpoweredLinkiumPickaxeRecipe",
+      "type": "recipe",
+      "sortid": 46,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "overpowered_linkium_pickaxe_recipe"
+    },
+    {
+      "name": "OverpoweredLinkiumAxeRecipe",
+      "type": "recipe",
+      "sortid": 47,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "overpowered_linkium_axe_recipe"
+    },
+    {
+      "name": "OverpoweredLinkiumShovelRecipe",
+      "type": "recipe",
+      "sortid": 48,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "overpowered_linkium_shovel_recipe"
+    },
+    {
+      "name": "OverpoweredLinkiumHoeRecipe",
+      "type": "recipe",
+      "sortid": 49,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "overpowered_linkium_hoe_recipe"
+    },
+    {
+      "name": "LinkiumAxeRecipe2",
+      "type": "recipe",
+      "sortid": 50,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "linkium_axe_recipe_2"
+    },
+    {
+      "name": "LinkiumHoeRecipe2",
+      "type": "recipe",
+      "sortid": 51,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "linkium_hoe_recipe_2"
+    },
+    {
+      "name": "OverpoweredLinkiumAxeRecipe2",
+      "type": "recipe",
+      "sortid": 52,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "overpowered_linkium_axe_recipe_2"
+    },
+    {
+      "name": "OverpoweredLinkiumHoeRecipe2",
+      "type": "recipe",
+      "sortid": 53,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "overpowered_linkium_hoe_recipe_2"
+    },
+    {
+      "name": "OverpoweredLinkiumArmor",
+      "type": "armor",
+      "sortid": 54,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "overpowered_linkium_armor",
+      "metadata": {
+        "eh": true,
+        "el": true,
+        "eb": true,
+        "ec": true
+      }
+    },
+    {
+      "name": "OverpoweredLinkiumArmorHelmetRecipe",
+      "type": "recipe",
+      "sortid": 55,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "overpowered_linkium_armor_helmet_recipe"
+    },
+    {
+      "name": "OverpoweredLinkiumArmorBodyRecipe",
+      "type": "recipe",
+      "sortid": 56,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "overpowered_linkium_armor_body_recipe"
+    },
+    {
+      "name": "OverpoweredLinkiumArmorLeggingsRecipe",
+      "type": "recipe",
+      "sortid": 57,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "overpowered_linkium_armor_leggings_recipe"
+    },
+    {
+      "name": "OverpoweredLinkiumArmorBootsRecipe",
+      "type": "recipe",
+      "sortid": 58,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "overpowered_linkium_armor_boots_recipe"
+    },
+    {
+      "name": "OverpoweredLinkiumArmorTickEvent",
+      "type": "procedure",
+      "sortid": 59,
+      "compiles": true,
+      "locked_code": true,
+      "ids": {},
+      "registry_name": "overpowered_linkium_armor_tick_event",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      }
+    },
+    {
+      "name": "OverpoweredLinkiumBootsNoFall",
+      "type": "procedure",
+      "sortid": 60,
+      "compiles": true,
+      "locked_code": true,
+      "ids": {},
+      "registry_name": "overpowered_linkium_boots_no_fall",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      }
+    },
+    {
+      "name": "LinkiumMeteore",
+      "type": "structure",
+      "sortid": 61,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "linkium_meteore"
+    },
+    {
+      "name": "LinkiumMeteore2",
+      "type": "structure",
+      "sortid": 62,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "linkium_meteore_2"
+    }
+  ],
+  "variable_elements": [],
+  "sound_elements": [],
+  "language_map": {
+    "en_us": {
+      "item.linkium.linkium_sword": "Linkium Sword",
+      "item.linkium.overpowered_linkium_sword": "Overpowered Linkium Sword",
+      "item.linkium.gold_core": "Gold Core",
+      "item.linkium.overpowered_linkium_armor_leggings": "Overpowered Linkium Leggings",
+      "block.linkium.linkium_block": "Block of Linkium",
+      "item.linkium.linkium_helmet": "Linkium Helmet",
+      "item.linkium.overpowered_linkium_axe": "Overpowered Linkium Axe",
+      "item.linkium.linkium_core": "Linkium Core",
+      "item.linkium.overpowered_linkium_armor_chestplate": "Overpowered Linkium Chestplate",
+      "item.linkium.overpowered_linkium_armor_boots": "Overpowered Linkium Boots",
+      "item.linkium.linkium_boots": "Linkium Boots",
+      "item.linkium.linkium_chestplate": "Linkium Chestplate",
+      "item.linkium.diamond_core": "Diamond Core",
+      "item.linkium.overpowered_linkium_ingot": "Overpowered Linkium Ingot",
+      "item.linkium.overpowered_linkium_shovel": "Overpowered Linkium Shovel",
+      "enchantment.linkium.smelt": "Smelt",
+      "item.linkium.linkium_axe": "Linkium Axe",
+      "block.linkium.linkium_ore": "Linkium Ore",
+      "item.linkium.overpowered_linkium_pickaxe": "Overpowered Linkium Pickaxe",
+      "item.linkium.linkium_leggings": "Linkium Leggings",
+      "item.linkium.linkium_pickaxe": "Linkium Pickaxe",
+      "item.linkium.overpowered_linkium_armor_helmet": "Overpowered Linkium Helmet",
+      "item.linkium.linkium_hoe": "Linkium Hoe",
+      "item.linkium.iron_core": "Iron Core",
+      "advancements.overpowered_linkium_hoe_advencement.descr": "Craft an overpowered linkium hoe",
+      "advancements.linkium_advencment.title": "What is this ore ?",
+      "advancements.overpowered_linkum_advencement.descr": "Craft an overpowered linkium",
+      "advancements.linkium_advencment.descr": "Get a linkium ore",
+      "itemGroup.tablinkium_mod": "Linkium Mod",
+      "item.linkium.overpowered_linkium_hoe": "Overpowered Linkium Hoe",
+      "advancements.overpowered_linkum_advencement.title": "Like a god !",
+      "item.linkium.linkium_shovel": "Linkium Shovel",
+      "item.linkium.linkium_ingot": "Linkium Ingot",
+      "block.linkium.linkium_power_loader": "Linkium Power Loader",
+      "advancements.overpowered_linkium_hoe_advencement.title": "Why ?"
+    }
+  },
+  "foldersRoot": {
+    "name": "~",
+    "children": []
+  },
+  "workspaceSettings": {
+    "modid": "linkium",
+    "modName": "LinkiumMod",
+    "version": "1.0.0",
+    "author": "Slypy06",
+    "websiteURL": "https://mcreator.net",
+    "license": "Academic Free License v3.0",
+    "disableForgeVersionCheck": true,
+    "serverSideOnly": false,
+    "requiredMods": [],
+    "dependencies": [],
+    "dependants": [],
+    "mcreatorDependencies": [],
+    "currentGenerator": "forge-1.16.5",
+    "credits": "Created using mod maker MCreator - https://mcreator.net/about",
+    "modElementsPackage": "fr.slypy.linkium",
+    "lockBaseModFiles": true
+  },
+  "mcreatorVersion": 202100118117
+}

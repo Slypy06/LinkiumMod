@@ -1,0 +1,7 @@
+{
+  "parent": "block/cube_all",
+  "textures": {
+    "all": "linkium:blocks/linkium_ore",
+    "particle": "linkium:blocks/linkium_ore"
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "_fv": 18,
+  "_type": "tab",
+  "definition": {
+    "name": "Linkium Mod",
+    "icon": {
+      "value": "CUSTOM:LinkiumIngot"
+    },
+    "showSearch": false
+  }
+}

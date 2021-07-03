@@ -1,0 +1,58 @@
+{
+  "_fv": 18,
+  "_type": "armor",
+  "definition": {
+    "enableHelmet": true,
+    "textureHelmet": "linkium_helmet",
+    "enableBody": true,
+    "textureBody": "linkium_chestplate",
+    "enableLeggings": true,
+    "textureLeggings": "linkium_leggings",
+    "enableBoots": true,
+    "textureBoots": "linkium_boots",
+    "creativeTab": {
+      "value": "CUSTOM:LinkiumMod"
+    },
+    "armorTextureFile": "linkium_",
+    "helmetName": "Linkium Helmet",
+    "bodyName": "Linkium Chestplate",
+    "leggingsName": "Linkium Leggings",
+    "bootsName": "Linkium Boots",
+    "helmetSpecialInfo": [],
+    "bodySpecialInfo": [],
+    "leggingsSpecialInfo": [],
+    "bootsSpecialInfo": [],
+    "helmetModelName": "Default",
+    "helmetModelPart": "Helmet",
+    "helmetModelTexture": "From armor",
+    "bodyModelName": "Default",
+    "bodyModelPart": "Body",
+    "armsModelPartL": "Arms L",
+    "armsModelPartR": "Arms R",
+    "bodyModelTexture": "From armor",
+    "leggingsModelName": "Default",
+    "leggingsModelPartL": "Leggings L",
+    "leggingsModelPartR": "Leggings R",
+    "leggingsModelTexture": "From armor",
+    "bootsModelName": "Default",
+    "bootsModelPartL": "Boots L",
+    "bootsModelPartR": "Boots R",
+    "bootsModelTexture": "From armor",
+    "maxDamage": 38,
+    "damageValueHelmet": 3,
+    "damageValueBody": 8,
+    "damageValueLeggings": 6,
+    "damageValueBoots": 3,
+    "enchantability": 30,
+    "toughness": 6.0,
+    "knockbackResistance": 0.0,
+    "equipSound": {
+      "value": "item.armor.equip_diamond"
+    },
+    "repairItems": [
+      {
+        "value": "CUSTOM:LinkiumIngot"
+      }
+    ]
+  }
+}

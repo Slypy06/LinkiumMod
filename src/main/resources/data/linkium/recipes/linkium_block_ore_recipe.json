@@ -1,0 +1,13 @@
+{
+  "group": "linkium",
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "linkium:linkium_block"
+    }
+  ],
+  "result": {
+    "item": "linkium:linkium_ingot",
+    "count": 9
+  }
+}

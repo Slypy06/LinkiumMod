@@ -1,0 +1,27 @@
+{
+  "_fv": 18,
+  "_type": "tool",
+  "definition": {
+    "renderType": 0,
+    "texture": "overpowered_linkium_sword",
+    "customModelName": "Normal",
+    "name": "Overpowered Linkium Sword",
+    "specialInfo": [],
+    "creativeTab": {
+      "value": "CUSTOM:LinkiumMod"
+    },
+    "toolType": "Sword",
+    "harvestLevel": 999,
+    "efficiency": 500.0,
+    "attackSpeed": 1.6,
+    "enchantability": 28,
+    "damageVsEntity": 100.0,
+    "usageCount": 15000,
+    "blocksAffected": [],
+    "hasGlow": false,
+    "repairItems": [],
+    "immuneToFire": true,
+    "stayInGridWhenCrafting": false,
+    "damageOnCrafting": false
+  }
+}

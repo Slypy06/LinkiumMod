@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "linkium:block/linkium_power_loader"
+    },
+    "facing=east": {
+      "model": "linkium:block/linkium_power_loader",
+      "y": 90
+    },
+    "facing=south": {
+      "model": "linkium:block/linkium_power_loader",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "linkium:block/linkium_power_loader",
+      "y": 270
+    }
+  }
+}

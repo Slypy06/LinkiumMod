@@ -1,0 +1,12 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "down": "linkium:blocks/linkium_power_loader_bottom",
+    "up": "linkium:blocks/linkium_power_loader_top",
+    "north": "linkium:blocks/linkium_power_loader_side",
+    "east": "linkium:blocks/linkium_power_loader_side",
+    "south": "linkium:blocks/linkium_power_loader_side",
+    "west": "linkium:blocks/linkium_power_loader_side",
+    "particle": "linkium:blocks/linkium_power_loader_side"
+  }
+}

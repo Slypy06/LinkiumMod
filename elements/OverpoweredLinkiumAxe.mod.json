@@ -1,0 +1,31 @@
+{
+  "_fv": 18,
+  "_type": "tool",
+  "definition": {
+    "renderType": 0,
+    "texture": "overpowered_linkium_axe",
+    "customModelName": "Normal",
+    "name": "Overpowered Linkium Axe",
+    "specialInfo": [],
+    "creativeTab": {
+      "value": "CUSTOM:LinkiumMod"
+    },
+    "toolType": "Axe",
+    "harvestLevel": 999,
+    "efficiency": 500.0,
+    "attackSpeed": 1.0,
+    "enchantability": 282,
+    "damageVsEntity": 125.0,
+    "usageCount": 15000,
+    "blocksAffected": [],
+    "hasGlow": false,
+    "repairItems": [
+      {
+        "value": "CUSTOM:OverpoweredLinkiumIngot"
+      }
+    ],
+    "immuneToFire": true,
+    "stayInGridWhenCrafting": false,
+    "damageOnCrafting": false
+  }
+}

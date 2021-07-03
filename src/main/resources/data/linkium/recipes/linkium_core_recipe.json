@@ -1,0 +1,42 @@
+{
+  "group": "linkium",
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "012",
+    "345",
+    "678"
+  ],
+  "key": {
+    "0": {
+      "item": "linkium:linkium_ingot"
+    },
+    "1": {
+      "item": "linkium:linkium_block"
+    },
+    "2": {
+      "item": "linkium:linkium_ingot"
+    },
+    "3": {
+      "item": "linkium:linkium_block"
+    },
+    "4": {
+      "item": "linkium:diamond_core"
+    },
+    "5": {
+      "item": "linkium:linkium_block"
+    },
+    "6": {
+      "item": "linkium:linkium_ingot"
+    },
+    "7": {
+      "item": "linkium:linkium_block"
+    },
+    "8": {
+      "item": "linkium:linkium_ingot"
+    }
+  },
+  "result": {
+    "item": "linkium:linkium_core",
+    "count": 1
+  }
+}

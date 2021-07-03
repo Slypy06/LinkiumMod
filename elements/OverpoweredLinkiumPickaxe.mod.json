@@ -1,0 +1,37 @@
+{
+  "_fv": 18,
+  "_type": "tool",
+  "definition": {
+    "renderType": 0,
+    "texture": "overpowered_linkium_pickaxe",
+    "customModelName": "Normal",
+    "name": "Overpowered Linkium Pickaxe",
+    "specialInfo": [],
+    "creativeTab": {
+      "value": "CUSTOM:LinkiumMod"
+    },
+    "toolType": "Pickaxe",
+    "harvestLevel": 999,
+    "efficiency": 500.0,
+    "attackSpeed": 1.2,
+    "enchantability": 28,
+    "damageVsEntity": 50.0,
+    "usageCount": 15000,
+    "blocksAffected": [],
+    "hasGlow": false,
+    "repairItems": [
+      {
+        "value": "CUSTOM:OverpoweredLinkiumIngot"
+      }
+    ],
+    "immuneToFire": true,
+    "stayInGridWhenCrafting": false,
+    "damageOnCrafting": false,
+    "onRightClickedInAir": {
+      "name": "OverpoweredLinkiumPickaxeRightClicked"
+    },
+    "onRightClickedOnBlock": {
+      "name": "OverpoweredLinkiumPickaxeRightClicked"
+    }
+  }
+}
