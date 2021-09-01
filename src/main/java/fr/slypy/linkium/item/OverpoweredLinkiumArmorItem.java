@@ -74,7 +74,7 @@ public class OverpoweredLinkiumArmorItem extends LinkiumModElements.ModElement {
 
 			@Override
 			public float getToughness() {
-				return 0f;
+				return 10f;
 			}
 
 			@Override
@@ -82,15 +82,16 @@ public class OverpoweredLinkiumArmorItem extends LinkiumModElements.ModElement {
 				return 0.5f;
 			}
 		};
-		elements.items.add(() -> new ArmorItem(armormaterial, EquipmentSlotType.HEAD, new Item.Properties().group(LinkiumModItemGroup.tab)) {
+		elements.items.add(() -> new ArmorItem(armormaterial, EquipmentSlotType.HEAD, new Item.Properties().group(LinkiumModItemGroup.tab).isImmuneToFire()) {
 			@Override
 			public String getArmorTexture(ItemStack stack, Entity entity, EquipmentSlotType slot, String type) {
-				return "linkium:textures/models/armor/overpowered_linkium__layer_" + (slot == EquipmentSlotType.LEGS ? "2" : "1") + ".png";
+				return "linkium:textures/models/armor/overpowered_linkium___layer_" + (slot == EquipmentSlotType.LEGS ? "2" : "1") + ".png";
 			}
 
 			@Override
 			public void onArmorTick(ItemStack itemstack, World world, PlayerEntity entity) {
 				super.onArmorTick(itemstack, world, entity);
+				
 				double x = entity.getPosX();
 				double y = entity.getPosY();
 				double z = entity.getPosZ();
@@ -101,14 +102,16 @@ public class OverpoweredLinkiumArmorItem extends LinkiumModElements.ModElement {
 				}
 			}
 		}.setRegistryName("overpowered_linkium_armor_helmet"));
-		elements.items.add(() -> new ArmorItem(armormaterial, EquipmentSlotType.CHEST, new Item.Properties().group(LinkiumModItemGroup.tab)) {
+		elements.items.add(() -> new ArmorItem(armormaterial, EquipmentSlotType.CHEST, new Item.Properties().group(LinkiumModItemGroup.tab).isImmuneToFire()) {
 			@Override
 			public String getArmorTexture(ItemStack stack, Entity entity, EquipmentSlotType slot, String type) {
-				return "linkium:textures/models/armor/overpowered_linkium__layer_" + (slot == EquipmentSlotType.LEGS ? "2" : "1") + ".png";
+				return "linkium:textures/models/armor/overpowered_linkium___layer_" + (slot == EquipmentSlotType.LEGS ? "2" : "1") + ".png";
 			}
 
 			@Override
 			public void onArmorTick(ItemStack itemstack, World world, PlayerEntity entity) {
+				super.onArmorTick(itemstack, world, entity);
+				
 				double x = entity.getPosX();
 				double y = entity.getPosY();
 				double z = entity.getPosZ();
@@ -119,14 +122,16 @@ public class OverpoweredLinkiumArmorItem extends LinkiumModElements.ModElement {
 				}
 			}
 		}.setRegistryName("overpowered_linkium_armor_chestplate"));
-		elements.items.add(() -> new ArmorItem(armormaterial, EquipmentSlotType.LEGS, new Item.Properties().group(LinkiumModItemGroup.tab)) {
+		elements.items.add(() -> new ArmorItem(armormaterial, EquipmentSlotType.LEGS, new Item.Properties().group(LinkiumModItemGroup.tab).isImmuneToFire()) {
 			@Override
 			public String getArmorTexture(ItemStack stack, Entity entity, EquipmentSlotType slot, String type) {
-				return "linkium:textures/models/armor/overpowered_linkium__layer_" + (slot == EquipmentSlotType.LEGS ? "2" : "1") + ".png";
+				return "linkium:textures/models/armor/overpowered_linkium___layer_" + (slot == EquipmentSlotType.LEGS ? "2" : "1") + ".png";
 			}
 
 			@Override
 			public void onArmorTick(ItemStack itemstack, World world, PlayerEntity entity) {
+				super.onArmorTick(itemstack, world, entity);
+				
 				double x = entity.getPosX();
 				double y = entity.getPosY();
 				double z = entity.getPosZ();
@@ -137,14 +142,16 @@ public class OverpoweredLinkiumArmorItem extends LinkiumModElements.ModElement {
 				}
 			}
 		}.setRegistryName("overpowered_linkium_armor_leggings"));
-		elements.items.add(() -> new ArmorItem(armormaterial, EquipmentSlotType.FEET, new Item.Properties().group(LinkiumModItemGroup.tab)) {
+		elements.items.add(() -> new ArmorItem(armormaterial, EquipmentSlotType.FEET, new Item.Properties().group(LinkiumModItemGroup.tab).isImmuneToFire()) {
 			@Override
 			public String getArmorTexture(ItemStack stack, Entity entity, EquipmentSlotType slot, String type) {
-				return "linkium:textures/models/armor/overpowered_linkium__layer_" + (slot == EquipmentSlotType.LEGS ? "2" : "1") + ".png";
+				return "linkium:textures/models/armor/overpowered_linkium___layer_" + (slot == EquipmentSlotType.LEGS ? "2" : "1") + ".png";
 			}
 
 			@Override
 			public void onArmorTick(ItemStack itemstack, World world, PlayerEntity entity) {
+				super.onArmorTick(itemstack, world, entity);
+				
 				double x = entity.getPosX();
 				double y = entity.getPosY();
 				double z = entity.getPosZ();

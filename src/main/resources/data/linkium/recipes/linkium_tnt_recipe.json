@@ -1,0 +1,42 @@
+{
+  "group": "linkium",
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "012",
+    "345",
+    "678"
+  ],
+  "key": {
+    "0": {
+      "item": "linkium:linkium_ingot"
+    },
+    "1": {
+      "item": "minecraft:gunpowder"
+    },
+    "2": {
+      "item": "linkium:linkium_ingot"
+    },
+    "3": {
+      "item": "minecraft:gunpowder"
+    },
+    "4": {
+      "item": "minecraft:tnt"
+    },
+    "5": {
+      "item": "minecraft:gunpowder"
+    },
+    "6": {
+      "item": "linkium:linkium_ingot"
+    },
+    "7": {
+      "item": "minecraft:gunpowder"
+    },
+    "8": {
+      "item": "linkium:linkium_ingot"
+    }
+  },
+  "result": {
+    "item": "linkium:linkium_tnt",
+    "count": 1
+  }
+}

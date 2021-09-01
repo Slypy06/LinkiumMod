@@ -1,0 +1,24 @@
+{
+  "group": "linkium",
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "0",
+    "1",
+    "2"
+  ],
+  "key": {
+    "0": {
+      "item": "minecraft:string"
+    },
+    "1": {
+      "item": "linkium:linkium_tnt"
+    },
+    "2": {
+      "item": "linkium:linkium_tnt"
+    }
+  },
+  "result": {
+    "item": "linkium:linkium_dynamite",
+    "count": 4
+  }
+}

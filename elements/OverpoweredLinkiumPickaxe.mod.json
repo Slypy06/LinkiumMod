@@ -30,8 +30,8 @@
     "onRightClickedInAir": {
       "name": "OverpoweredLinkiumPickaxeRightClicked"
     },
-    "onRightClickedOnBlock": {
-      "name": "OverpoweredLinkiumPickaxeRightClicked"
+    "onBlockDestroyedWithTool": {
+      "name": "OverpoweredLinkiumPickaxeBlockDestroyedWithTool"
     }
   }
 }

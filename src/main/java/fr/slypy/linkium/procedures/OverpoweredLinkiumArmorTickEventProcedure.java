@@ -1,6 +1,8 @@
 package fr.slypy.linkium.procedures;
 
 import net.minecraft.potion.Effects;
+import net.minecraftforge.api.distmarker.Dist;
+import net.minecraftforge.api.distmarker.OnlyIn;
 import net.minecraft.potion.EffectInstance;
 import net.minecraft.item.ItemStack;
 import net.minecraft.inventory.EquipmentSlotType;
@@ -9,6 +11,8 @@ import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.Entity;
 
 import java.util.Map;
+
+import org.spongepowered.asm.mixin.MixinEnvironment.Side;
 
 import fr.slypy.linkium.item.OverpoweredLinkiumArmorItem;
 import fr.slypy.linkium.LinkiumModElements;
@@ -20,6 +24,7 @@ public class OverpoweredLinkiumArmorTickEventProcedure extends LinkiumModElement
 		super(instance, 59);
 	}
 
+	@OnlyIn(Dist.CLIENT)
 	public static void executeProcedure(Map<String, Object> dependencies) {
 		if (dependencies.get("entity") == null) {
 			if (!dependencies.containsKey("entity"))
@@ -48,7 +53,7 @@ public class OverpoweredLinkiumArmorTickEventProcedure extends LinkiumModElement
 				? ((LivingEntity) entity).getItemStackFromSlot(EquipmentSlotType.fromSlotTypeAndIndex(EquipmentSlotType.Group.ARMOR, (int) 3))
 				: ItemStack.EMPTY).getItem() == new ItemStack(OverpoweredLinkiumArmorItem.helmet, (int) (1)).getItem())) {
 			if (entity instanceof LivingEntity)
-				((LivingEntity) entity).addPotionEffect(new EffectInstance(Effects.NIGHT_VISION, (int) 160, (int) 2, (false), (false)));
+				((LivingEntity) entity).addPotionEffect(new EffectInstance(Effects.NIGHT_VISION, (int) 205, (int) 0, (false), (false)));
 		}
 		if (entity instanceof PlayerEntity) {
 			
@@ -68,17 +73,34 @@ public class OverpoweredLinkiumArmorTickEventProcedure extends LinkiumModElement
 											.getItemStackFromSlot(EquipmentSlotType.fromSlotTypeAndIndex(EquipmentSlotType.Group.ARMOR, (int) 3))
 									: ItemStack.EMPTY).getItem() == new ItemStack(OverpoweredLinkiumArmorItem.helmet, (int) (1)).getItem()))) {
 				
-				((PlayerEntity) entity).abilities.allowFlying = true;
-				((PlayerEntity) entity).abilities.setFlySpeed(2);
+				if(entity.world.isRemote) {
+				
+					((PlayerEntity) entity).abilities.allowFlying = true;
+					((PlayerEntity) entity).abilities.setFlySpeed(0.12f);
+				
+				} else {
+					
+					((LivingEntity) entity).addPotionEffect(new EffectInstance(Effects.INVISIBILITY, (int) 5, (int) 0, (false), (false)));
+					
+				}
 				
 			} else {
 				
-				((PlayerEntity) entity).abilities.allowFlying = false;
-				((PlayerEntity) entity).abilities.setFlySpeed(1);
+				if(entity.world.isRemote) {
+				
+					((PlayerEntity) entity).abilities.allowFlying = ((PlayerEntity) entity).isCreative();
+					((PlayerEntity) entity).abilities.setFlySpeed(0.05f);
+				
+				}
 				
 			}
 			
-			((PlayerEntity) entity).sendPlayerAbilities();
+			if(entity.world.isRemote) {
+			
+				((PlayerEntity) entity).sendPlayerAbilities();
+			
+			}
+			
 		}
 	}
 }

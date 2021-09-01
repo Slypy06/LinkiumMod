@@ -1,0 +1,12 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "down": "linkium:blocks/overpowered_linkium_receptacle",
+    "up": "linkium:blocks/overpowered_linkium_receptacle",
+    "north": "linkium:blocks/overpowered_linkium_receptacle_front",
+    "east": "linkium:blocks/overpowered_linkium_receptacle_side",
+    "south": "linkium:blocks/overpowered_linkium_receptacle_side",
+    "west": "linkium:blocks/overpowered_linkium_receptacle_side",
+    "particle": "linkium:blocks/overpowered_linkium_receptacle"
+  }
+}

@@ -1,6 +1,6 @@
 {
   "parent": "item/generated",
   "textures": {
-    "layer0": "linkium:items/diamondcore"
+    "layer0": "linkium:items/diamond_core"
   }
 }

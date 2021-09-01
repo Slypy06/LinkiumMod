@@ -1,0 +1,37 @@
+{
+  "display": {
+    "background": "minecraft:textures/block/stone.png",
+    "icon": {
+      "item": "linkium:overpowered_linkium_armor_chestplate"
+    },
+    "title": {
+      "translate": "advancements.overpowered_linkium_incarnation_advancement.title"
+    },
+    "description": {
+      "translate": "advancements.overpowered_linkium_incarnation_advancement.descr"
+    },
+    "frame": "challenge",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "overpowered_linkium_incarnation_advancement": {
+      "trigger": "minecraft:player_killed_entity",
+      "conditions": {
+        "entity": [
+          {
+            "condition": "minecraft:entity_properties",
+            "predicate": {
+              "type": "linkium:overpowered_linkium_incarnation"
+            },
+            "entity": "this"
+          }
+        ]
+      }
+    }
+  },
+  "rewards": {
+    "experience": 1
+  }
+}

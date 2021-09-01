@@ -1,0 +1,17 @@
+{
+  "_fv": 18,
+  "_type": "enchantment",
+  "definition": {
+    "name": "Immortality",
+    "type": "ARMOR",
+    "rarity": "UNCOMMON",
+    "minLevel": 1,
+    "maxLevel": 5,
+    "damageModifier": 0,
+    "compatibleEnchantments": [],
+    "compatibleItems": [],
+    "isTreasureEnchantment": true,
+    "isCurse": false,
+    "isAllowedOnBooks": true
+  }
+}

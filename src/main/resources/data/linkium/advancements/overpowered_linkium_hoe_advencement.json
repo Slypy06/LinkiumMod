@@ -21,7 +21,7 @@
       "conditions": {
         "items": [
           {
-            "item": "linkium:linkium_core",
+            "item": "linkium:overpowered_linkium_hoe",
             "count": {
               "min": 1,
               "max": 999999

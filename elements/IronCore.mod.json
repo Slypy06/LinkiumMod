@@ -3,7 +3,7 @@
   "_type": "item",
   "definition": {
     "renderType": 0,
-    "texture": "ironcore",
+    "texture": "iron_core",
     "customModelName": "Normal",
     "name": "Iron Core",
     "rarity": "UNCOMMON",

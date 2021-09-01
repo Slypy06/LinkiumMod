@@ -1,0 +1,37 @@
+{
+  "_fv": 18,
+  "_type": "gun",
+  "definition": {
+    "renderType": 0,
+    "texture": "linkium_dynamite",
+    "customModelName": "Normal",
+    "name": "Linkium Dynamite",
+    "specialInfo": [],
+    "creativeTab": {
+      "value": "CUSTOM:LinkiumMod"
+    },
+    "stackSize": 64,
+    "ammoItem": {
+      "value": ""
+    },
+    "shootConstantly": true,
+    "usageCount": 0,
+    "actionSound": {
+      "value": "entity.egg.throw"
+    },
+    "hasGlow": false,
+    "animation": "none",
+    "enableMeleeDamage": false,
+    "damageVsEntity": 0.0,
+    "bulletPower": 0.5,
+    "bulletDamage": 0.0,
+    "bulletKnockback": 0,
+    "bulletParticles": false,
+    "bulletIgnitesFire": false,
+    "bulletItemTexture": {
+      "value": "CUSTOM:LinkiumDynamite"
+    },
+    "bulletModel": "Default",
+    "customBulletModelTexture": ""
+  }
+}

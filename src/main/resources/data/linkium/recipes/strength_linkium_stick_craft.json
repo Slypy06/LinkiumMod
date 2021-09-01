@@ -1,0 +1,24 @@
+{
+  "group": "linkium",
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "  2",
+    " 4 ",
+    "6  "
+  ],
+  "key": {
+    "2": {
+      "item": "minecraft:blaze_powder"
+    },
+    "4": {
+      "item": "linkium:linkium_core"
+    },
+    "6": {
+      "item": "linkium:linkium_ingot"
+    }
+  },
+  "result": {
+    "item": "linkium:strength_linkium_stick",
+    "count": 1
+  }
+}

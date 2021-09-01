@@ -17,19 +17,32 @@
  */
 package fr.slypy.linkium;
 
+import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.Random;
+import java.util.UUID;
 import java.util.function.Supplier;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
+import com.google.common.collect.HashMultimap;
+import com.google.common.collect.ImmutableSet;
+
+import fr.slypy.linkium.item.OverpoweredLinkiumAxeItem;
+import fr.slypy.linkium.item.OverpoweredLinkiumPickaxeItem;
+import fr.slypy.linkium.item.OverpoweredLinkiumSwordItem;
 import net.minecraft.block.Block;
+import net.minecraft.block.BlockState;
+import net.minecraft.block.Blocks;
+import net.minecraft.block.material.Material;
+import net.minecraft.client.gui.screen.DeathScreen;
 import net.minecraft.enchantment.Enchantment;
 import net.minecraft.enchantment.EnchantmentHelper;
 import net.minecraft.enchantment.Enchantments;
 import net.minecraft.entity.EntityType;
+import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.item.ExperienceOrbEntity;
 import net.minecraft.entity.item.ItemEntity;
 import net.minecraft.entity.player.PlayerEntity;
@@ -39,17 +52,28 @@ import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.crafting.FurnaceRecipe;
 import net.minecraft.item.crafting.IRecipeType;
-import net.minecraft.server.management.PlayerInteractionManager;
+import net.minecraft.stats.Stats;
+import net.minecraft.util.DamageSource;
 import net.minecraft.util.ResourceLocation;
+import net.minecraft.util.math.AxisAlignedBB;
 import net.minecraft.util.math.BlockPos;
+import net.minecraft.util.math.MathHelper;
 import net.minecraft.world.IWorld;
 import net.minecraft.world.World;
 import net.minecraft.world.server.ServerWorld;
 import net.minecraftforge.common.MinecraftForge;
+import net.minecraftforge.common.ToolType;
 import net.minecraftforge.event.RegistryEvent;
+import net.minecraftforge.event.TickEvent;
+import net.minecraftforge.event.entity.living.LivingDeathEvent;
+import net.minecraftforge.event.entity.living.LivingKnockBackEvent;
+import net.minecraftforge.event.entity.player.PlayerEvent.HarvestCheck;
 import net.minecraftforge.event.world.BlockEvent;
+import net.minecraftforge.eventbus.api.EventPriority;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
+import net.minecraftforge.fml.LogicalSide;
 import net.minecraftforge.fml.common.Mod;
+import net.minecraftforge.fml.common.Mod.EventBusSubscriber;
 import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.event.server.FMLServerStartingEvent;
@@ -106,6 +130,10 @@ public class LinkiumMod {
 		elements.registerSounds(event);
 	}
 	private static class LinkiumModFMLBusEvents {
+		boolean ignorePickaxe = false;
+		private final HashMultimap<UUID, BlockPos> nextMap = HashMultimap.create();
+		private final Map<UUID, Integer> mined = new HashMap<UUID, Integer>();
+		private boolean realAxeHit = true;
 		private final LinkiumMod parent;
 		LinkiumModFMLBusEvents(LinkiumMod parent) {
 			this.parent = parent;
@@ -116,8 +144,270 @@ public class LinkiumMod {
 			this.parent.elements.getElements().forEach(element -> element.serverLoad(event));
 		}
 		
+		public int determineOrientation(World w, BlockPos pos, LivingEntity living) {
+			
+			if(MathHelper.abs((float) (living.getPosX() - pos.getX())) < 2.0F && MathHelper.abs((float) (living.getPosZ() - pos.getZ())) < 2.0F) {
+				
+				double d0 = living.getPosY() + 1.82D - living.getYOffset();
+				
+				if(d0 - pos.getY() > 2.0D || pos.getY() - d0 > 0.0D) {
+					
+					return 0;
+					
+				}
+				
+			}
+			
+			float rotation = MathHelper.abs(living.rotationYaw);
+			
+			return (rotation > 45F && rotation < 135F) || (rotation > 225F && rotation < 315F) ? 2 : 1;
+			
+		}
+		
 		@SubscribeEvent
-		public void blockBreak(BlockEvent.BreakEvent e) {
+		public void blockBreakPickaxe(BlockEvent.BreakEvent e) {
+
+			if(e.getWorld() instanceof World && e.getPlayer() instanceof ServerPlayerEntity && !e.getWorld().isRemote() && !ignorePickaxe && e.getPlayer().getHeldItemMainhand().getItem() == OverpoweredLinkiumPickaxeItem.block && e.getPlayer().getHeldItemMainhand().getOrCreateTag().contains("mode") && e.getPlayer().getHeldItemMainhand().getOrCreateTag().getInt("mode") == 1) {
+				
+				World w = (ServerWorld) e.getWorld();
+				
+				int orientation = determineOrientation(w, e.getPos(), e.getPlayer());
+				
+				ServerPlayerEntity p = (ServerPlayerEntity) e.getPlayer();
+				
+				ignorePickaxe = true;
+				
+				switch(orientation) {
+				
+				case 0:
+					
+					for(int xi = -1; xi < 2; xi++) {
+						
+						for(int zi = -1; zi < 2; zi++) {
+							
+							BlockPos pos = new BlockPos(e.getPos().getX() + xi, e.getPos().getY(), e.getPos().getZ() + zi);
+							BlockState state = w.getBlockState(pos);
+							
+							if(e.getState().getBlock() != Blocks.AIR && e.getPlayer().isCreative() || (!state.getRequiresTool() || state.getHarvestTool() == ToolType.PICKAXE && 999 >= state.getHarvestLevel()) && state.getBlockHardness(w, pos) > 0) {
+							
+								p.interactionManager.tryHarvestBlock(pos);
+							
+							}
+							
+						}
+						
+					}
+					
+					break;
+					
+				case 1:
+					
+					for(int xi = -1; xi < 2; xi++) {
+						
+						for(int yi = -1; yi < 2; yi++) {
+							
+							BlockPos pos = new BlockPos(e.getPos().getX() + xi, e.getPos().getY() + yi, e.getPos().getZ());
+							BlockState state = w.getBlockState(pos);
+							
+							if(e.getState().getBlock() != Blocks.AIR && e.getPlayer().isCreative() || (!state.getRequiresTool() || state.getHarvestTool() == ToolType.PICKAXE && 999 >= state.getHarvestLevel()) && state.getBlockHardness(w, pos) > 0) {
+							
+								p.interactionManager.tryHarvestBlock(pos);
+							
+							}
+							
+						}
+						
+					}
+					
+					break;
+					
+				case 2:
+					
+					for(int zi = -1; zi < 2; zi++) {
+						
+						for(int yi = -1; yi < 2; yi++) {
+							
+							BlockPos pos = new BlockPos(e.getPos().getX(), e.getPos().getY() + yi, e.getPos().getZ() + zi);
+							BlockState state = w.getBlockState(pos);
+							
+							if(e.getState().getBlock() != Blocks.AIR && e.getPlayer().isCreative() || (!state.getRequiresTool() || state.getHarvestTool() == ToolType.PICKAXE && 999 >= state.getHarvestLevel()) && state.getBlockHardness(w, pos) > 0) {
+							
+								p.interactionManager.tryHarvestBlock(pos);
+							
+							}
+							
+						}
+						
+					}
+					
+					break;
+				
+				}
+				
+				ignorePickaxe = false;
+				
+			}
+			
+		}
+		
+		@SubscribeEvent
+		public void tickAxe(TickEvent.PlayerTickEvent e) {
+			
+			if(e.phase != TickEvent.Phase.START) {
+				
+				return;
+				
+			}
+			
+			if(e.side != LogicalSide.SERVER) {
+				
+				return;
+				
+			}
+			
+			UUID uuid = e.player.getUniqueID();
+
+			if (!nextMap.containsKey(uuid) || nextMap.get(uuid).isEmpty()) {
+				
+				return;
+				
+			}
+
+			int i = 0;
+
+			for(BlockPos point : ImmutableSet.copyOf(nextMap.get(uuid))) {
+
+				realAxeHit = false;
+				((ServerPlayerEntity) e.player).interactionManager.tryHarvestBlock(point);
+				realAxeHit = true;
+	
+				nextMap.remove(uuid, point);
+
+				System.out.println(nextMap);
+				
+				if(i++ > 16) { // tick limit
+				
+					System.out.println("break to next tick");
+					
+					break;
+					
+				}
+			
+			}
+			
+			if(mined.get(uuid) > 128) { // total limit
+				
+				nextMap.removeAll(uuid);
+				
+			}
+			
+		}
+		
+		@SubscribeEvent
+		public void entityKilledSword(LivingDeathEvent e) {
+			
+			if(!(e.getEntityLiving() instanceof PlayerEntity) && !e.getEntity().getEntityWorld().isRemote()) {
+				
+				LivingEntity entity = e.getEntityLiving();
+				LivingEntity killer = entity.getAttackingEntity();
+				
+				if(killer != null && killer.getEntityWorld() instanceof World && killer instanceof ServerPlayerEntity && !killer.getEntityWorld().isRemote() && !ignorePickaxe && killer.getHeldItemMainhand().getItem() == OverpoweredLinkiumSwordItem.block && killer.getHeldItemMainhand().getOrCreateTag().contains("mode") && killer.getHeldItemMainhand().getOrCreateTag().getInt("mode") == 1) {
+					
+					entity.getEntityWorld().getEntitiesWithinAABB(entity.getClass(), new AxisAlignedBB(entity.getPosX() - 15, entity.getPosY() - 15, entity.getPosY() - 15, entity.getPosX() + 15, entity.getPosY() + 15, entity.getPosZ() + 15), null).forEach(livingEntity -> {
+						
+						if(!livingEntity.getUniqueID().equals(entity.getUniqueID())) {
+						
+							livingEntity.attackEntityFrom(DamageSource.causePlayerDamage((PlayerEntity) killer), Float.MAX_VALUE);
+							
+							if (EnchantmentHelper.getEnchantments(killer.getHeldItemMainhand()).containsKey(Enchantments.UNBREAKING)) {
+								
+								int level = EnchantmentHelper.getEnchantmentLevel(Enchantments.UNBREAKING, killer.getHeldItemMainhand());
+								int chance = 100 / (level + 1);
+								
+								for(int i = 0; i < 5; i++) {
+								
+									if(new Random().nextInt(100) + 1 <= chance) {
+										
+										killer.getHeldItemMainhand().setDamage(killer.getHeldItemMainhand().getDamage() + 1);
+										
+									}
+								
+								}
+								
+							} else {
+								
+								killer.getHeldItemMainhand().setDamage(killer.getHeldItemMainhand().getDamage() + 5);
+								
+							}
+						
+						}
+						
+						if(killer.getHeldItemMainhand().getDamage() >= killer.getHeldItemMainhand().getMaxDamage()) {
+							
+							killer.getHeldItemMainhand().shrink(1);
+							
+							((PlayerEntity) killer).addStat(Stats.ITEM_BROKEN.get(killer.getHeldItemMainhand().getItem()));
+							
+						}
+						
+					});
+					
+				}
+				
+			}
+			
+		}
+		
+		@SubscribeEvent
+		public void blockBreakAxe(BlockEvent.BreakEvent e) {
+			
+			if(e.getWorld() instanceof World && e.getPlayer() instanceof ServerPlayerEntity && !e.getWorld().isRemote() && e.getPlayer().getHeldItemMainhand().getItem() == OverpoweredLinkiumAxeItem.block && e.getPlayer().getHeldItemMainhand().getOrCreateTag().contains("mode") && e.getPlayer().getHeldItemMainhand().getOrCreateTag().getInt("mode") == 1) {
+				
+				if(e.getState().getBlock().getRegistryName().getPath().contains("log") || e.getState().getBlock().getRegistryName().getPath().contains("wood") || e.getState().getMaterial() == Material.LEAVES) {
+					
+					if(realAxeHit) {
+						
+						mined.remove(e.getPlayer().getUniqueID());
+						
+					}
+					
+					UUID uuid = e.getPlayer().getUniqueID();
+					
+					mined.put(uuid, mined.getOrDefault(uuid, 0) + 1);
+					
+					for(int xi = -1; xi < 2; xi++) {
+						
+						for(int yi = -1; yi < 2; yi++) {
+							
+							for(int zi = -1; zi < 2; zi++) {
+								
+								if(xi != 0 || yi != 0 || zi != 0) {
+								
+									BlockPos newPos = new BlockPos(e.getPos().getX() + xi, e.getPos().getY() + yi, e.getPos().getZ() + zi);
+									BlockState state = e.getWorld().getBlockState(newPos);
+									
+									if(state.getBlock().getRegistryName().getPath().contains("log") || state.getBlock().getRegistryName().getPath().contains("wood") || state.getMaterial() == Material.LEAVES) {
+										
+										nextMap.put(uuid, newPos);
+										
+									}
+								
+								}
+								
+							}
+							
+						}
+						
+					}
+					
+				}
+				
+			}
+			
+		}
+		
+		@SubscribeEvent
+		public void blockBreakSmelt(BlockEvent.BreakEvent e) {
 			
 			PlayerEntity p = e.getPlayer();
 			IWorld iw = e.getWorld();
@@ -214,8 +504,6 @@ public class LinkiumMod {
 						tool.setDamage(tool.getDamage() + 1);
 						
 					}
-					
-					e.setCanceled(true);
 					
 					w.removeBlock(pos, false);
 

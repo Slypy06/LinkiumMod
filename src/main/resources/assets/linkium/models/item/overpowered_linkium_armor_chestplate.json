@@ -1,6 +1,6 @@
 {
   "parent": "item/generated",
   "textures": {
-    "layer0": "linkium:items/overpoweredlinkium_body"
+    "layer0": "linkium:items/overpowered_linkium_chestplate"
   }
 }

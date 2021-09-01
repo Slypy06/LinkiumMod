@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "linkium:block/overpowered_linkium_recptacle"
+    },
+    "facing=east": {
+      "model": "linkium:block/overpowered_linkium_recptacle",
+      "y": 90
+    },
+    "facing=south": {
+      "model": "linkium:block/overpowered_linkium_recptacle",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "linkium:block/overpowered_linkium_recptacle",
+      "y": 270
+    }
+  }
+}

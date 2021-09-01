@@ -6,16 +6,15 @@ import net.minecraftforge.registries.ObjectHolder;
 import net.minecraft.world.World;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.Hand;
-import net.minecraft.util.Direction;
-import net.minecraft.util.ActionResultType;
 import net.minecraft.util.ActionResult;
 import net.minecraft.item.crafting.Ingredient;
 import net.minecraft.item.PickaxeItem;
-import net.minecraft.item.ItemUseContext;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.Item;
 import net.minecraft.item.IItemTier;
 import net.minecraft.entity.player.PlayerEntity;
+import net.minecraft.entity.LivingEntity;
+import net.minecraft.block.BlockState;
 
 import java.util.Map;
 import java.util.HashMap;
@@ -74,26 +73,7 @@ public class OverpoweredLinkiumPickaxeItem extends LinkiumModElements.ModElement
 				}
 				return retval;
 			}
-
-			@Override
-			public ActionResultType onItemUse(ItemUseContext context) {
-				ActionResultType retval = super.onItemUse(context);
-				World world = context.getWorld();
-				BlockPos pos = context.getPos();
-				PlayerEntity entity = context.getPlayer();
-				Direction direction = context.getFace();
-				int x = pos.getX();
-				int y = pos.getY();
-				int z = pos.getZ();
-				ItemStack itemstack = context.getItem();
-				{
-					Map<String, Object> $_dependencies = new HashMap<>();
-					$_dependencies.put("entity", entity);
-					$_dependencies.put("itemstack", itemstack);
-					OverpoweredLinkiumPickaxeRightClickedProcedure.executeProcedure($_dependencies);
-				}
-				return retval;
-			}
+			
 		}.setRegistryName("overpowered_linkium_pickaxe"));
 	}
 }

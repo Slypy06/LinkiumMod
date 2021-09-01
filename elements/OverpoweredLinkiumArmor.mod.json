@@ -3,13 +3,13 @@
   "_type": "armor",
   "definition": {
     "enableHelmet": true,
-    "textureHelmet": "overpoweredlinkium_head",
+    "textureHelmet": "overpowered_linkium_helmet",
     "enableBody": true,
-    "textureBody": "overpoweredlinkium_body",
+    "textureBody": "overpowered_linkium_chestplate",
     "enableLeggings": true,
-    "textureLeggings": "overpoweredlinkium_leggings",
+    "textureLeggings": "overpowered_linkium_leggings",
     "enableBoots": true,
-    "textureBoots": "overpoweredlinkium_boots",
+    "textureBoots": "overpowered_linkium_boots",
     "onHelmetTick": {
       "name": "OverpoweredLinkiumArmorTickEvent"
     },

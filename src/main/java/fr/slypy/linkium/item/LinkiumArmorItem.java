@@ -37,7 +37,7 @@ public class LinkiumArmorItem extends LinkiumModElements.ModElement {
 		IArmorMaterial armormaterial = new IArmorMaterial() {
 			@Override
 			public int getDurability(EquipmentSlotType slot) {
-				return new int[]{13, 15, 16, 11}[slot.getIndex()] * 38;
+				return new int[]{13, 15, 16, 11}[slot.getIndex()] * 35;
 			}
 
 			@Override

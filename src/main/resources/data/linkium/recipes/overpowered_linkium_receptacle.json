@@ -1,0 +1,42 @@
+{
+  "group": "linkium",
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "012",
+    "345",
+    "678"
+  ],
+  "key": {
+    "0": {
+      "item": "linkium:linkium_block"
+    },
+    "1": {
+      "item": "linkium:linkium_core"
+    },
+    "2": {
+      "item": "linkium:linkium_block"
+    },
+    "3": {
+      "item": "linkium:linkium_core"
+    },
+    "4": {
+      "item": "linkium:overpowered_linkium_block"
+    },
+    "5": {
+      "item": "linkium:linkium_core"
+    },
+    "6": {
+      "item": "linkium:linkium_block"
+    },
+    "7": {
+      "item": "linkium:linkium_core"
+    },
+    "8": {
+      "item": "linkium:linkium_block"
+    }
+  },
+  "result": {
+    "item": "linkium:overpowered_linkium_recptacle",
+    "count": 1
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "down": "linkium:blocks/linkium_tnt_bottom",
+    "up": "linkium:blocks/linkium_tnt_top",
+    "north": "linkium:blocks/linkium_tnt_side",
+    "east": "linkium:blocks/linkium_tnt_side",
+    "south": "linkium:blocks/linkium_tnt_side",
+    "west": "linkium:blocks/linkium_tnt_side",
+    "particle": "linkium:blocks/linkium_tnt_bottom"
+  }
+}

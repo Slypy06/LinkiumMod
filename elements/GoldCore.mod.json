@@ -3,7 +3,7 @@
   "_type": "item",
   "definition": {
     "renderType": 0,
-    "texture": "goldcore",
+    "texture": "gold_core",
     "customModelName": "Normal",
     "name": "Gold Core",
     "rarity": "UNCOMMON",

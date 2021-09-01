@@ -384,7 +384,7 @@
       "type": "tool",
       "sortid": 39,
       "compiles": true,
-      "locked_code": false,
+      "locked_code": true,
       "ids": {},
       "registry_name": "overpowered_linkium_pickaxe"
     },
@@ -501,7 +501,7 @@
       "type": "armor",
       "sortid": 54,
       "compiles": true,
-      "locked_code": false,
+      "locked_code": true,
       "ids": {},
       "registry_name": "overpowered_linkium_armor",
       "metadata": {
@@ -598,47 +598,499 @@
       "locked_code": false,
       "ids": {},
       "registry_name": "linkium_meteore_2"
+    },
+    {
+      "name": "OverpoweredLinkiumArmorDamage",
+      "type": "procedure",
+      "sortid": 63,
+      "compiles": true,
+      "locked_code": true,
+      "ids": {},
+      "registry_name": "overpowered_linkium_armor_damage",
+      "metadata": {
+        "dependencies": []
+      }
+    },
+    {
+      "name": "LinkiumTnt",
+      "type": "block",
+      "sortid": 64,
+      "compiles": true,
+      "locked_code": true,
+      "ids": {},
+      "registry_name": "linkium_tnt"
+    },
+    {
+      "name": "LinkiumDynamite",
+      "type": "gun",
+      "sortid": 65,
+      "compiles": true,
+      "locked_code": true,
+      "ids": {},
+      "registry_name": "linkium_dynamite"
+    },
+    {
+      "name": "LinkiumTntEntity",
+      "type": "mob",
+      "sortid": 66,
+      "compiles": true,
+      "locked_code": true,
+      "ids": {},
+      "registry_name": "linkium_tnt_entity"
+    },
+    {
+      "name": "LinkiumTntRecipe",
+      "type": "recipe",
+      "sortid": 67,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "linkium_tnt_recipe"
+    },
+    {
+      "name": "LinkiumDynamiteRecipe",
+      "type": "recipe",
+      "sortid": 68,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "linkium_dynamite_recipe"
+    },
+    {
+      "name": "DynamiteRecipe",
+      "type": "recipe",
+      "sortid": 69,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "dynamite_recipe"
+    },
+    {
+      "name": "OverpoweredLinkiumIncarnation",
+      "type": "mob",
+      "sortid": 70,
+      "compiles": true,
+      "locked_code": true,
+      "ids": {},
+      "registry_name": "overpowered_linkium_incarnation"
+    },
+    {
+      "name": "OverpoweredLinkiumIncarnationLoots",
+      "type": "loottable",
+      "sortid": 71,
+      "compiles": true,
+      "locked_code": true,
+      "ids": {},
+      "registry_name": "overpowered_linkium_incarnation_loots"
+    },
+    {
+      "name": "OverpoweredLinkiumCore",
+      "type": "item",
+      "sortid": 72,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "overpowered_linkium_core"
+    },
+    {
+      "name": "OverpoweredLinkiumRecptacle",
+      "type": "block",
+      "sortid": 73,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "overpowered_linkium_recptacle"
+    },
+    {
+      "name": "OverpoweredLinkiumRecptacleBlockIsPlacedBy",
+      "type": "procedure",
+      "sortid": 74,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "overpowered_linkium_recptacle_block_is_placed_by",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "OverpoweredLinkiumBlock",
+      "type": "block",
+      "sortid": 75,
+      "compiles": true,
+      "locked_code": true,
+      "ids": {},
+      "registry_name": "overpowered_linkium_block"
+    },
+    {
+      "name": "OverpoweredLinkiumBLockCraft",
+      "type": "recipe",
+      "sortid": 76,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "overpowered_linkium_b_lock_craft"
+    },
+    {
+      "name": "OverpoweredLinkiumIncarnationAdvancement",
+      "type": "achievement",
+      "sortid": 77,
+      "compiles": true,
+      "locked_code": true,
+      "ids": {},
+      "registry_name": "overpowered_linkium_incarnation_advancement"
+    },
+    {
+      "name": "OverpoweredLinkiumReceptacle",
+      "type": "recipe",
+      "sortid": 78,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "overpowered_linkium_receptacle"
+    },
+    {
+      "name": "LinkiumStickRightClickedInAir",
+      "type": "procedure",
+      "sortid": 79,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "linkium_stick_right_clicked_in_air",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "itemstack",
+            "type": "itemstack"
+          }
+        ]
+      }
+    },
+    {
+      "name": "SpeedLinkiumStick",
+      "type": "item",
+      "sortid": 79,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "speed_linkium_stick"
+    },
+    {
+      "name": "StrengthLinkiumStick",
+      "type": "item",
+      "sortid": 80,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "strength_linkium_stick"
+    },
+    {
+      "name": "SpeedLinkiumStickCraft",
+      "type": "recipe",
+      "sortid": 81,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "speed_linkium_stick_craft"
+    },
+    {
+      "name": "StrengthLinkiumStickCraft",
+      "type": "recipe",
+      "sortid": 82,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "strength_linkium_stick_craft"
+    },
+    {
+      "name": "JumpLinkiumStick",
+      "type": "item",
+      "sortid": 83,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "jump_linkium_stick"
+    },
+    {
+      "name": "FeedLinkiumStick",
+      "type": "item",
+      "sortid": 84,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "feed_linkium_stick"
+    },
+    {
+      "name": "JumpLinkiumStickCraft",
+      "type": "recipe",
+      "sortid": 85,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "jump_linkium_stick_craft"
+    },
+    {
+      "name": "FeedLinkiumStickCraft",
+      "type": "recipe",
+      "sortid": 86,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "feed_linkium_stick_craft"
+    },
+    {
+      "name": "ResistanceLinkiumStick",
+      "type": "item",
+      "sortid": 87,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "resistance_linkium_stick"
+    },
+    {
+      "name": "HealLinkiumStick",
+      "type": "item",
+      "sortid": 88,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "heal_linkium_stick"
+    },
+    {
+      "name": "ResistanceLinkiumStickCraft",
+      "type": "recipe",
+      "sortid": 89,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "resistance_linkium_stick_craft"
+    },
+    {
+      "name": "HealLinkiumStickCraft",
+      "type": "recipe",
+      "sortid": 90,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "heal_linkium_stick_craft"
+    },
+    {
+      "name": "LinkiumAppleFoodEaten",
+      "type": "procedure",
+      "sortid": 91,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "linkium_apple_food_eaten",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      }
+    },
+    {
+      "name": "Vampire",
+      "type": "enchantment",
+      "sortid": 92,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "vampire"
+    },
+    {
+      "name": "VampireHit",
+      "type": "procedure",
+      "sortid": 93,
+      "compiles": true,
+      "locked_code": true,
+      "ids": {},
+      "registry_name": "vampire_hit",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "sourceentity",
+            "type": "entity"
+          }
+        ]
+      }
+    },
+    {
+      "name": "OverpoweredLinkiumAxeRightClickedInAir",
+      "type": "procedure",
+      "sortid": 94,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "overpowered_linkium_axe_right_clicked_in_air",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "itemstack",
+            "type": "itemstack"
+          }
+        ]
+      }
+    },
+    {
+      "name": "OverpoweredLinkiumSwordRightClickedInAir",
+      "type": "procedure",
+      "sortid": 95,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "overpowered_linkium_sword_right_clicked_in_air",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "itemstack",
+            "type": "itemstack"
+          }
+        ]
+      }
+    },
+    {
+      "name": "LinkiumApple",
+      "type": "food",
+      "sortid": 96,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "linkium_apple"
+    },
+    {
+      "name": "Immortality",
+      "type": "enchantment",
+      "sortid": 97,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "immortality"
+    },
+    {
+      "name": "ImmortalityDeath",
+      "type": "procedure",
+      "sortid": 98,
+      "compiles": true,
+      "locked_code": true,
+      "ids": {},
+      "registry_name": "immortality_death",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
     }
   ],
   "variable_elements": [],
   "sound_elements": [],
   "language_map": {
     "en_us": {
-      "item.linkium.linkium_sword": "Linkium Sword",
-      "item.linkium.overpowered_linkium_sword": "Overpowered Linkium Sword",
-      "item.linkium.gold_core": "Gold Core",
-      "item.linkium.overpowered_linkium_armor_leggings": "Overpowered Linkium Leggings",
       "block.linkium.linkium_block": "Block of Linkium",
-      "item.linkium.linkium_helmet": "Linkium Helmet",
+      "item.linkium.speed_linkium_stick": "Speed Linkium Stick",
+      "item.linkium.feed_linkium_stick": "Feed Linkium Stick",
       "item.linkium.overpowered_linkium_axe": "Overpowered Linkium Axe",
       "item.linkium.linkium_core": "Linkium Core",
       "item.linkium.overpowered_linkium_armor_chestplate": "Overpowered Linkium Chestplate",
       "item.linkium.overpowered_linkium_armor_boots": "Overpowered Linkium Boots",
       "item.linkium.linkium_boots": "Linkium Boots",
-      "item.linkium.linkium_chestplate": "Linkium Chestplate",
       "item.linkium.diamond_core": "Diamond Core",
       "item.linkium.overpowered_linkium_ingot": "Overpowered Linkium Ingot",
-      "item.linkium.overpowered_linkium_shovel": "Overpowered Linkium Shovel",
-      "enchantment.linkium.smelt": "Smelt",
+      "entity.linkium.overpowered_linkium_incarnation": "Overpowered Linkium Incarnation",
       "item.linkium.linkium_axe": "Linkium Axe",
-      "block.linkium.linkium_ore": "Linkium Ore",
-      "item.linkium.overpowered_linkium_pickaxe": "Overpowered Linkium Pickaxe",
+      "item.linkium.linkium_apple": "Linkium Apple",
+      "item.linkium.resistance_linkium_stick": "Resistance Linkium Stick",
       "item.linkium.linkium_leggings": "Linkium Leggings",
+      "block.linkium.overpowered_linkium_recptacle": "Overpowered Linkium Receptacle",
       "item.linkium.linkium_pickaxe": "Linkium Pickaxe",
-      "item.linkium.overpowered_linkium_armor_helmet": "Overpowered Linkium Helmet",
-      "item.linkium.linkium_hoe": "Linkium Hoe",
-      "item.linkium.iron_core": "Iron Core",
       "advancements.overpowered_linkium_hoe_advencement.descr": "Craft an overpowered linkium hoe",
       "advancements.linkium_advencment.title": "What is this ore ?",
       "advancements.overpowered_linkum_advencement.descr": "Craft an overpowered linkium",
+      "advancements.overpowered_linkium_incarnation_advancement.descr": "Kill an overpowered linkium incarnation",
+      "item.linkium.jump_linkium_stick": "Jump Linkium Stick",
+      "block.linkium.linkium_tnt": "Linkium Tnt",
+      "item.linkium.linkium_shovel": "Linkium Shovel",
+      "block.linkium.linkium_power_loader": "Linkium Power Loader",
+      "item.linkium.strength_linkium_stick": "Strength Linkium Stick",
+      "item.linkium.linkium_sword": "Linkium Sword",
+      "item.linkium.overpowered_linkium_sword": "Overpowered Linkium Sword",
+      "item.linkium.gold_core": "Gold Core",
+      "item.linkium.overpowered_linkium_armor_leggings": "Overpowered Linkium Leggings",
+      "item.linkium.linkium_helmet": "Linkium Helmet",
+      "enchantment.linkium.vampire": "Vampire",
+      "item.linkium.linkium_tnt_entity_spawn_egg": "Linkium Tnt Entity Spawn Egg",
+      "item.linkium.linkium_chestplate": "Linkium Chestplate",
+      "item.linkium.overpowered_linkium_shovel": "Overpowered Linkium Shovel",
+      "enchantment.linkium.smelt": "Smelt",
+      "item.linkium.overpowered_linkium_incarnation_spawn_egg": "Overpowered Linkium Incarnation Spawn Egg",
+      "block.linkium.overpowered_linkium_block": "Overpowered Linkium Block",
+      "block.linkium.linkium_ore": "Linkium Ore",
+      "item.linkium.overpowered_linkium_pickaxe": "Overpowered Linkium Pickaxe",
+      "item.linkium.overpowered_linkium_core": "Overpowered Linkium Core",
+      "item.linkium.heal_linkium_stick": "Heal Linkium Stick",
+      "entity.linkium.linkium_tnt_entity": "Linkium Tnt Entity",
+      "item.linkium.linkium_dynamite": "Linkium Dynamite",
+      "item.linkium.overpowered_linkium_armor_helmet": "Overpowered Linkium Helmet",
+      "item.linkium.linkium_hoe": "Linkium Hoe",
+      "item.linkium.iron_core": "Iron Core",
       "advancements.linkium_advencment.descr": "Get a linkium ore",
       "itemGroup.tablinkium_mod": "Linkium Mod",
       "item.linkium.overpowered_linkium_hoe": "Overpowered Linkium Hoe",
+      "advancements.overpowered_linkium_incarnation_advancement.title": "Unstopable !",
+      "enchantment.linkium.immortality": "Immortality",
       "advancements.overpowered_linkum_advencement.title": "Like a god !",
-      "item.linkium.linkium_shovel": "Linkium Shovel",
-      "item.linkium.linkium_ingot": "Linkium Ingot",
-      "block.linkium.linkium_power_loader": "Linkium Power Loader",
-      "advancements.overpowered_linkium_hoe_advencement.title": "Why ?"
+      "advancements.overpowered_linkium_hoe_advencement.title": "Why ?",
+      "item.linkium.linkium_ingot": "Linkium Ingot"
     }
   },
   "foldersRoot": {
